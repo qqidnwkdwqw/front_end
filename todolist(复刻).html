@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- css和 html在同一个路径下 -->
+    <title>任务清单管理网页</title>
+</head>
+<body>
+    <header>
+        <section>
+            <label for="title">ToDoList</label>
+            <!-- lebel和input关联：用户点击 "ToDoList" 文字时，输入框会立即获得焦点，无需精确点击狭小的输入框区域。 -->
+            <input type="text" 
+              id="title" 
+              name="title" 
+              placeholder="请输入添加事项" 
+              required="required" 
+              autocomplete="off"
+            />
+            <!-- name属性：作为input内容的键名/变量名 
+                 required属性：表示表格必填，否则浏览器提示
+                 aotucompelete属性：防止浏览器自动填充-->
+        </section>
+    </header>
+    <section>
+        <h2>今日事项 <span id="count">0</span></h2>
+        <!-- 嵌套span标签用于显示计数 -->
+        <ol id="todolist" class="demo-box"></ol>
+        <!-- 有序列表用于记录每件事项 -->
+    </section>
+    <footr class="footer">ToDoList记录美好生活!</footr>
+    <!-- 页脚,总出现在所有内容的下方 -->
+     <script src="script.js"></script>
+     <!-- 同一路径下，直接写文件名就行 -->
+</body>
+</html>
+
+
+<!-- 右下角UTF-8通过编码保存选择编码格式utf-8，这样才能使代码中和浏览器中均无乱码 -->
